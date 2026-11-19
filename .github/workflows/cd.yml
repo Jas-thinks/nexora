@@ -28,6 +28,7 @@ jobs:
     needs: gate
     permissions: { contents: read, packages: write, id-token: write, attestations: write }
     strategy:
+      fail-fast: false
       matrix:
         include:
           - { name: api, context: backend, target: api }
@@ -62,6 +63,7 @@ jobs:
           provenance: true
           sbom: true
       - uses: actions/attest-build-provenance@v2
+        if: github.event.repository.private == false   # attestations are not offered for user-owned private repositories
         with: { subject-name: "${{ env.IMAGE_PREFIX }}/${{ matrix.name }}", subject-digest: "${{ steps.build.outputs.digest }}", push-to-registry: true }
 
   deploy:
