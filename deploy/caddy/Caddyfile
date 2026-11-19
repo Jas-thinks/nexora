@@ -1,0 +1,12 @@
+# Automatic HTTPS (Let's Encrypt) for {$DOMAIN}. For DOMAIN=localhost Caddy issues a local, self-signed certificate.
+{$DOMAIN} {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		-Server
+	}
+	reverse_proxy lb:8080 {
+		header_up X-Forwarded-Proto {scheme}
+		flush_interval -1          # do not buffer the AI mentor's streamed (SSE) answers
+	}
+}
