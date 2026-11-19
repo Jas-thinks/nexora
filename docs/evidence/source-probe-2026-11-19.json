@@ -1,0 +1,1525 @@
+{
+ "codeforces": {
+  "hits": [
+   {
+    "url": "https://codeforces.com/problemset",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5530,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://codeforces.com/api/problemset.problems",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2289644,
+    "final": null,
+    "json": "dict[2]"
+   },
+   {
+    "url": "https://codeforces.com/api/contest.list?gym=true",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1053102,
+    "final": null,
+    "json": "dict[2]"
+   }
+  ],
+  "robots": {
+   "codeforces.com": {
+    "robots": 200,
+    "disallow": [
+     "/admin",
+     "/alpha",
+     "/attachment",
+     "/comments/with",
+     "/contest",
+     "/contestInvitation",
+     "/contestRegistrants",
+     "/contestRegistration",
+     "/contests/with",
+     "/css",
+     "/data",
+     "/enter"
+    ],
+    "content_signal": [
+     "Content-Signal: search=yes,ai-train=no,use=reference"
+    ],
+    "ai_restrictions": true
+   }
+  }
+ },
+ "codechef": {
+  "hits": [
+   {
+    "url": "https://www.codechef.com/practice",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 10025,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://www.codechef.com/api/list/contests/all",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 10333,
+    "final": null,
+    "json": "dict[8]"
+   },
+   {
+    "url": "https://www.codechef.com/api/list/problems/easy",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 3056,
+    "final": null,
+    "json": "dict[4]"
+   }
+  ],
+  "robots": {
+   "www.codechef.com": {
+    "robots": 200,
+    "disallow": [
+     "/includes/",
+     "/misc/",
+     "/modules/",
+     "/profiles/",
+     "/scripts/",
+     "/sites/",
+     "/themes/",
+     "/CHANGELOG.txt",
+     "/INSTALL.mysql.txt",
+     "/INSTALL.pgsql.txt",
+     "/install.php",
+     "/INSTALL.txt"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "leetcode": {
+  "hits": [
+   {
+    "url": "https://leetcode.com/problemset/",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5510,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://leetcode.com/api/problems/algorithms/",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5549,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "leetcode.com": {
+    "robots": 200,
+    "disallow": [
+     "/submissions",
+     "/api/",
+     "/*/api",
+     "/problems/random-one-question",
+     "/accounts",
+     "/contest/*/problems",
+     "/playground",
+     "/subscription",
+     "/list",
+     "/notes",
+     "/session",
+     "/progress"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "atcoder": {
+  "hits": [
+   {
+    "url": "https://atcoder.jp/contests/archive",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 38178,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://kenkoooo.com/atcoder/resources/merged-problems.json",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 4823964,
+    "final": null,
+    "json": "list[9969]"
+   },
+   {
+    "url": "https://kenkoooo.com/atcoder/resources/problems.json",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1254483,
+    "final": null,
+    "json": "list[9969]"
+   }
+  ],
+  "robots": {
+   "atcoder.jp": {
+    "robots": 200,
+    "disallow": [
+     "/contests/*/standings/",
+     "/contests/*/submissions/",
+     "/contests/*/clarifications/",
+     "/submissions/",
+     "/servertime/",
+     "/users/*/history/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   },
+   "kenkoooo.com": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "geeksforgeeks": {
+  "hits": [
+   {
+    "url": "https://www.geeksforgeeks.org/explore",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 678421,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://www.geeksforgeeks.org/problems/",
+    "status": "ERR",
+    "err": "TooManyRedirects"
+   }
+  ],
+  "robots": {
+   "www.geeksforgeeks.org": {
+    "robots": 200,
+    "disallow": [
+     "/wp-admin/",
+     "/community/",
+     "/search/",
+     "/wp-content/plugins/",
+     "/connect/",
+     "/content-override.php"
+    ],
+    "content_signal": [],
+    "ai_restrictions": true
+   }
+  }
+ },
+ "hackerrank": {
+  "hits": [
+   {
+    "url": "https://www.hackerrank.com/domains/algorithms",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 594945,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://www.hackerrank.com/rest/contests/master/tracks/algorithms/challenges?offset=0&limit=5",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 24235,
+    "final": null,
+    "json": "dict[6]"
+   }
+  ],
+  "robots": {
+   "www.hackerrank.com": {
+    "robots": 200,
+    "disallow": [
+     "/x/tests/",
+     "/x/interviews/",
+     "/x/settings/",
+     "/*download_solution$",
+     "/tests/",
+     "/work/embedview/",
+     "/*?*h_r=",
+     "/*?*hr_r=",
+     "/profile/",
+     "/*?isFullScreen=true",
+     "/contests/",
+     "/rest/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "hackerearth": {
+  "hits": [
+   {
+    "url": "https://www.hackerearth.com/practice/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 152744,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://www.hackerearth.com/challenges/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 99428,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "www.hackerearth.com": {
+    "robots": 200,
+    "disallow": [
+     "/*?login=",
+     "/*&login=",
+     "/*AJAX",
+     "/ru/*",
+     "/fr/*",
+     "/de/*",
+     "/zh/*",
+     "/pt-br/*",
+     "/ja/*"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "topcoder": {
+  "hits": [
+   {
+    "url": "https://www.topcoder.com/challenges",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 1989,
+    "final": "https://www.topcoder.com/opportunities/challenge",
+    "json": null
+   },
+   {
+    "url": "https://api.topcoder.com/v5/challenges?perPage=2",
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 23,
+    "final": null,
+    "json": "dict[1]"
+   }
+  ],
+  "robots": {
+   "www.topcoder.com": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   },
+   "api.topcoder.com": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "codesignal": {
+  "hits": [
+   {
+    "url": "https://app.codesignal.com/arcade",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 3699,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://codesignal.com/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 591052,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "app.codesignal.com": {
+    "robots": 200,
+    "disallow": [
+     "/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   },
+   "codesignal.com": {
+    "robots": 200,
+    "disallow": [
+     "/wp-admin/",
+     "/wp-content/uploads/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "cses": {
+  "hits": [
+   {
+    "url": "https://cses.fi/problemset/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 62304,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://cses.fi/problemset/list/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 62320,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "cses.fi": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "spoj": {
+  "hits": [
+   {
+    "url": "https://www.spoj.com/problems/classical/",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5427,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://www.spoj.com/problems/",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5376,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "www.spoj.com": {
+    "robots": 200,
+    "disallow": [
+     "/*/status/",
+     "/*/ranks/",
+     "/ranks/*/start=*",
+     "/status*"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "kattis": {
+  "hits": [
+   {
+    "url": "https://open.kattis.com/problems",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 149631,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://open.kattis.com/contests",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 118626,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "open.kattis.com": {
+    "robots": 200,
+    "disallow": [
+     "/submissions",
+     "/users",
+     "/relay",
+     "/cdn-cgi/"
+    ],
+    "content_signal": [
+     "Content-Signal: search=yes,ai-train=no,use=reference"
+    ],
+    "ai_restrictions": true
+   }
+  }
+ },
+ "dmoj": {
+  "hits": [
+   {
+    "url": "https://dmoj.ca/problems/",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5371,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://dmoj.ca/api/v2/problems?page=1",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 200707,
+    "final": null,
+    "json": "dict[4]"
+   },
+   {
+    "url": "https://dmoj.ca/api/v2/problem/aplusb",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1022,
+    "final": null,
+    "json": "dict[4]"
+   }
+  ],
+  "robots": {
+   "dmoj.ca": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [
+     "Content-Signal: search=yes,ai-train=no,use=reference"
+    ],
+    "ai_restrictions": true
+   }
+  }
+ },
+ "timus": {
+  "hits": [
+   {
+    "url": "https://acm.timus.ru/problemset.aspx",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 8204,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "acm.timus.ru": {
+    "robots": 200,
+    "disallow": [
+     "/admin",
+     "/auth.aspx",
+     "/ce.aspx",
+     "/edit.aspx",
+     "/getsubmit.aspx",
+     "/print.aspx",
+     "/search.aspx",
+     "/rating.aspx",
+     "/status.aspx?",
+     "/ranklist.aspx?"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "projecteuler": {
+  "hits": [
+   {
+    "url": "https://projecteuler.net/archives",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 17817,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://projecteuler.net/recent",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 5390,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://projecteuler.net/minimal=problems",
+    "status": 200,
+    "ct": "text/plain",
+    "bytes": 54706,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "projecteuler.net": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "toph": {
+  "hits": [
+   {
+    "url": "https://toph.co/problems",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 69468,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://toph.co/contests",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 36399,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "toph.co": {
+    "robots": 200,
+    "disallow": [
+     "/_",
+     "/api",
+     "/arena",
+     "/authorize",
+     "/contests/training",
+     "/login/",
+     "/s/",
+     "/settings"
+    ],
+    "content_signal": [
+     "Content-Signal: ai-train=no, search=yes, ai-input=no"
+    ],
+    "ai_restrictions": true
+   }
+  }
+ },
+ "csacademy": {
+  "hits": [
+   {
+    "url": "https://csacademy.com/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 3148,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "csacademy.com": {
+    "robots": 200,
+    "disallow": [
+     "/testing"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "uva": {
+  "hits": [
+   {
+    "url": "https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 26718,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "onlinejudge.org": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "lightoj": {
+  "hits": [
+   {
+    "url": "https://lightoj.com/problems",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 3228102,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "lightoj.com": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "usaco": {
+  "hits": [
+   {
+    "url": "https://usaco.org/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 9971,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://usaco.org/index.php?page=contests",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 9978,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "usaco.org": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "aizu": {
+  "hits": [
+   {
+    "url": "https://onlinejudge.u-aizu.ac.jp/problems",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 2000,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://judgeapi.u-aizu.ac.jp/resources/problems?page=0&size=3",
+    "status": 410,
+    "ct": "text/html",
+    "bytes": 143,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "onlinejudge.u-aizu.ac.jp": {
+    "robots": 200,
+    "note": "none/HTML"
+   },
+   "judgeapi.u-aizu.ac.jp": {
+    "robots": 410,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "yukicoder": {
+  "hits": [
+   {
+    "url": "https://yukicoder.me/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 36724,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://yukicoder.me/api/v1/problems",
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 677881,
+    "final": null,
+    "json": "list[3967]"
+   }
+  ],
+  "robots": {
+   "yukicoder.me": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "luogu": {
+  "hits": [
+   {
+    "url": "https://www.luogu.com.cn/problem/list",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 65518,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://www.luogu.com.cn/problem/list?_contentOnly=1",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 65537,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "www.luogu.com.cn": {
+    "robots": 200,
+    "disallow": [
+     "/record",
+     "/recordnew",
+     "/paste"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "omegaup": {
+  "hits": [
+   {
+    "url": "https://omegaup.com/arena/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 14920,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://omegaup.com/api/problem/list/?page=1&rowcount=3",
+    "status": 429,
+    "ct": "text/html",
+    "bytes": 162,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "omegaup.com": {
+    "robots": 200,
+    "disallow": [
+     "/admin/",
+     "/api/",
+     "/install/",
+     "/login/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "beecrowd": {
+  "hits": [
+   {
+    "url": "https://judge.beecrowd.com/en/problems/index/1",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5561,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "judge.beecrowd.com": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": true
+   }
+  }
+ },
+ "tlx": {
+  "hits": [
+   {
+    "url": "https://tlx.toki.id/problems",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 834,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://api.tlx.toki.id/v2/problems/public?page=1",
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 43,
+    "final": null,
+    "json": "dict[2]"
+   }
+  ],
+  "robots": {
+   "tlx.toki.id": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   },
+   "api.tlx.toki.id": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "quera": {
+  "hits": [
+   {
+    "url": "https://quera.org/problemset",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 432617,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "quera.org": {
+    "robots": 200,
+    "disallow": [
+     "/dashboard/",
+     "/billing/",
+     "/accounts/",
+     "/employer/",
+     "/course/",
+     "/r/",
+     "/college/campaign/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "eolymp": {
+  "hits": [
+   {
+    "url": "https://eolymp.com/en/problems",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 149535,
+    "final": "https://eolymp.com/problems",
+    "json": null
+   },
+   {
+    "url": "https://api.eolymp.com/spec",
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 19,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "eolymp.com": {
+    "robots": 200,
+    "disallow": [
+     "/signin",
+     "/signup",
+     "/signout",
+     "/register",
+     "/recover",
+     "/email",
+     "/sso",
+     "/unsubscribe",
+     "/settings",
+     "/mints",
+     "/store/checkout",
+     "/store/orders"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   },
+   "api.eolymp.com": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "france-ioi": {
+  "hits": [
+   {
+    "url": "https://www.france-ioi.org/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 823,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "www.france-ioi.org": {
+    "robots": 200,
+    "disallow": [
+     "/user/perso.php"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "kilonova": {
+  "hits": [
+   {
+    "url": "https://kilonova.ro/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 103533,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://kilonova.ro/api/problem/search",
+    "status": 400,
+    "ct": "application/json",
+    "bytes": 47,
+    "final": null,
+    "json": "dict[2]"
+   }
+  ],
+  "robots": {
+   "kilonova.ro": {
+    "robots": 200,
+    "disallow": [
+     "/api/",
+     "/profile/",
+     "/submissions/",
+     "/submissions?",
+     "/submissions",
+     "/pastes/",
+     "/pastes?",
+     "/pastes",
+     "/docs/",
+     "/docs"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "szkopul": {
+  "hits": [
+   {
+    "url": "https://szkopul.edu.pl/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 23276,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "szkopul.edu.pl": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "infoarena": {
+  "hits": [
+   {
+    "url": "https://infoarena.ro/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 30533,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "infoarena.ro": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "neps": {
+  "hits": [
+   {
+    "url": "https://neps.academy/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 210801,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "neps.academy": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "ksp": {
+  "hits": [
+   {
+    "url": "https://ksp.mff.cuni.cz/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 13058,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "ksp.mff.cuni.cz": {
+    "robots": 200,
+    "disallow": [
+     "/api/39-Z2-2/",
+     "/api/34-Z1-3/",
+     "/api/auth/",
+     "/api/ovvp/",
+     "/api/tasks/",
+     "/auth/login.cgi",
+     "/priv",
+     "/viz"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "codeup": {
+  "hits": [
+   {
+    "url": "https://codeup.kr/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 48810,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "codeup.kr": {
+    "robots": 200,
+    "disallow": [
+     "/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "mendo": {
+  "hits": [
+   {
+    "url": "https://mendo.mk/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 15494,
+    "final": "http://mendo.mk/Welcome.do",
+    "json": null
+   }
+  ],
+  "robots": {
+   "mendo.mk": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "icpc": {
+  "hits": [
+   {
+    "url": "https://icpc.global/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 2808,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://u.icpc.global/problems/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 26018,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://u.icpc.global/training/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 57218,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://u.icpc.global/training/online-judging-systems/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 17328,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "icpc.global": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   },
+   "u.icpc.global": {
+    "robots": 200,
+    "disallow": [
+     "/wp-admin/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "ubc": {
+  "hits": [
+   {
+    "url": "https://icpc.cs.ubc.ca/resources",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 22747,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "icpc.cs.ubc.ca": {
+    "robots": 200,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "clist": {
+  "hits": [
+   {
+    "url": "https://clist.by/",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5452,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://clist.by/api/v4/contest/",
+    "status": 401,
+    "ct": "text/html",
+    "bytes": 0,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "clist.by": {
+    "robots": 200,
+    "disallow": [
+     "/login/",
+     "/logout/",
+     "/signup/",
+     "/oauth/",
+     "/auth/",
+     "/o/",
+     "/service_auth/",
+     "/chat/",
+     "/chats/",
+     "/admin/",
+     "/charts/",
+     "/get/events/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "cf-gym": {
+  "hits": [
+   {
+    "url": "https://codeforces.com/gyms",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 5470,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "codeforces.com": {
+    "robots": 200,
+    "disallow": [
+     "/admin",
+     "/alpha",
+     "/attachment",
+     "/comments/with",
+     "/contest",
+     "/contestInvitation",
+     "/contestRegistrants",
+     "/contestRegistration",
+     "/contests/with",
+     "/css",
+     "/data",
+     "/enter"
+    ],
+    "content_signal": [
+     "Content-Signal: search=yes,ai-train=no,use=reference"
+    ],
+    "ai_restrictions": true
+   }
+  }
+ },
+ "google-cc": {
+  "hits": [
+   {
+    "url": "https://codingcompetitions.withgoogle.com/",
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 272,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "codingcompetitions.withgoogle.com": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "rosalind": {
+  "hits": [
+   {
+    "url": "https://rosalind.info/problems/locations/",
+    "status": 403,
+    "ct": "text/html",
+    "bytes": 169,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "rosalind.info": {
+    "robots": 403,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "usaco-guide": {
+  "hits": [
+   {
+    "url": "https://usaco.guide/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 371971,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://usaco.guide/general/contests",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 110923,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "usaco.guide": {
+    "robots": 200,
+    "disallow": [
+     "/problems?"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "kactl": {
+  "hits": [
+   {
+    "url": "https://github.com/kth-competitive-programming/kactl",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 230473,
+    "final": null,
+    "json": null
+   },
+   {
+    "url": "https://api.github.com/repos/kth-competitive-programming/kactl/license",
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 140,
+    "final": null,
+    "json": "dict[3]"
+   }
+  ],
+  "robots": {
+   "github.com": {
+    "robots": 200,
+    "disallow": [
+     "/account-login",
+     "/copilot/",
+     "/copilot/c/",
+     "/ekansa/Open-Context-Data",
+     "/ekansa/opencontext-*",
+     "/Explodingstuff/",
+     "/gist/",
+     "/search/advanced",
+     "/search$",
+     "/*/*/pulse_committer_data.json$",
+     "/*/*/pulse_committer_data.json?*",
+     "/*/archive/"
+    ],
+    "content_signal": [],
+    "ai_restrictions": true
+   },
+   "api.github.com": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "cp-algorithms": {
+  "hits": [
+   {
+    "url": "https://cp-algorithms.com/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 136604,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "cp-algorithms.com": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "cses-book": {
+  "hits": [
+   {
+    "url": "https://cses.fi/book/book.pdf",
+    "status": 200,
+    "ct": "application/pdf",
+    "bytes": 1099959,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "cses.fi": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "a2oj": {
+  "hits": [
+   {
+    "url": "https://a2oj.netlify.app/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 1354,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "a2oj.netlify.app": {
+    "robots": 404,
+    "note": "none/HTML"
+   }
+  }
+ },
+ "450dsa": {
+  "hits": [
+   {
+    "url": "https://450dsa.com/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 3414,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "450dsa.com": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "tuf": {
+  "hits": [
+   {
+    "url": "https://takeuforward.org/",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 240061,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "takeuforward.org": {
+    "robots": 200,
+    "disallow": [
+     "/profile/edit",
+     "/api/",
+     "/plus/account"
+    ],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "neetcode": {
+  "hits": [
+   {
+    "url": "https://neetcode.io/practice",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 98868,
+    "final": null,
+    "json": null
+   }
+  ],
+  "robots": {
+   "neetcode.io": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ },
+ "grind75": {
+  "hits": [
+   {
+    "url": "https://www.techinterviewhandbook.org/grind75",
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 13267,
+    "final": "https://www.techinterviewhandbook.org/grind75/",
+    "json": null
+   }
+  ],
+  "robots": {
+   "www.techinterviewhandbook.org": {
+    "robots": 200,
+    "disallow": [],
+    "content_signal": [],
+    "ai_restrictions": false
+   }
+  }
+ }
+}

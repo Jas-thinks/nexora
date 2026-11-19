@@ -1,0 +1,5 @@
+# Contest intelligence
+
+Implemented: contest ingestion for Codeforces (official `contest.list`), AtCoder (AtCoder Problems `contests.json`), DMOJ (`/api/v2/contests`), CodeChef (public JSON), CLIST (needs user key, unverified live). UI `/contests`: upcoming list, platform filter, countdown, duration, timezone display, last-synced per platform, `.ics` export with 30-minute alarm. Live data verified in the UI (e.g. Codeforces Round 1136, CodeChef Starters 266).
+Rules: dates/links come only from the source; empty state says "not synced" rather than inventing entries; `rated` is `null` when the source does not say.
+Known limits: AtCoder's feed lists past/archived contests and may not include upcoming ones (upcoming AtCoder rounds were not observed in the synced data; investigate or use CLIST); LeetCode/HackerRank/HackerEarth/Topcoder/ICPC have no verified source yet; no push reminders; no personalised preparation assistant (needs mentor + recent-performance analysis; the daily engine already supports a `cp` mode and topic mode that such an assistant would drive).
