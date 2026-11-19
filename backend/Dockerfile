@@ -1,7 +1,7 @@
 # One image recipe, three runtime targets:  api (default) · worker (same image, different command) · executor (needs a Docker CLI)
 #   docker build --target api      -t nexora-api .
 #   docker build --target executor -t nexora-executor .
-FROM python:3.12-slim AS base
+FROM python:3.15-slim AS base
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
 WORKDIR /app
 COPY requirements.txt .
