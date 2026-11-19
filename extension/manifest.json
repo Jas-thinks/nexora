@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Nexora Capture",
+  "version": "0.1.0",
+  "description": "Sends the verdicts of YOUR OWN LeetCode submissions to your Nexora account. Never sends your code.",
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["https://leetcode.com/*"],
+  "optional_host_permissions": ["http://localhost/*", "http://127.0.0.1/*", "https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "content_scripts": [
+    { "matches": ["https://leetcode.com/*"], "js": ["inject.js"], "run_at": "document_start", "world": "MAIN" },
+    { "matches": ["https://leetcode.com/*"], "js": ["content.js"], "run_at": "document_start" }
+  ],
+  "action": { "default_title": "Nexora Capture", "default_popup": "popup.html" },
+  "options_page": "options.html"
+}
