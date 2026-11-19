@@ -70,7 +70,5 @@ Postgres/Redis exporters, a load test of this stack, secrets in a manager rather
 `localStorage` tokens, and a first real GitHub Actions run.
 
 ## Verified vs not
-Verified on the local compose stack: build, boot ordering (migrate -> api/worker), 3-replica spread, sandbox through the executor,
-replica-kill / Redis-loss / Postgres-restart drills, Prometheus scraping, Grafana provisioning, production-overlay port exposure
-(only Caddy public; the balancer on loopback), Caddyfile validity. **Not verified:** the cloud VM scripts (`bootstrap.sh`, `deploy.sh`
-syntax-checked only), the GitHub workflows (linted, never executed on GitHub), TLS issuance, multi-arch builds.
+**Verified locally and on GitHub's runners** (first Actions run on `main`): the whole compose stack builds and boots in the right order (migrate -> api/worker), 3-replica spread, sandbox run through the executor, the replica-kill / Redis-loss / Postgres-restart drills, backend tests on SQLite and on Postgres 16 + Redis with migrations (`alembic check`), web typecheck/tests/build, extension tests, docs-sync. Verified locally only: Prometheus scraping, Grafana provisioning, production-overlay port exposure (only Caddy public; balancer on loopback), Caddyfile validity.
+**Not verified:** pushing images to GHCR and the SSH deploy job (CD ran only as far as its gate), the cloud-VM scripts (`bootstrap.sh`, `deploy.sh` are syntax-checked only), TLS issuance, CodeQL (needs a public repo or code scanning), multi-arch builds.

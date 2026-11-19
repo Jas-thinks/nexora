@@ -6,6 +6,8 @@ on:
 permissions: { contents: read, security-events: write, actions: read }
 jobs:
   analyze:
+    # Code scanning is free on public repositories; on private ones it needs GitHub Code Security. Skipped (not failed) until one of those is true.
+    if: github.event.repository.private == false || vars.ENABLE_CODEQL == 'true'
     runs-on: ubuntu-latest
     strategy: { fail-fast: false, matrix: { language: [python, javascript-typescript] } }
     steps:

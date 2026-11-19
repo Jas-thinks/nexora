@@ -3,8 +3,7 @@
 An AI-assisted mentor for data structures, competitive programming and system design. It builds a model of what *you* know from
 your real submissions, then tells you what to practise next, why, and how to get unstuck without giving the answer away.
 
-[![CI](../../actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
-[![CodeQL](../../actions/workflows/codeql.yml/badge.svg)](../../actions/workflows/codeql.yml)
+[![CI](https://github.com/Jas-thinks/nexora/actions/workflows/ci.yml/badge.svg)](https://github.com/Jas-thinks/nexora/actions/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## What it does
@@ -81,7 +80,7 @@ scripts/      smoke.sh, chaos.sh                                          docs/ 
 Built and tested: everything in the table above. **Not done** (details in the roadmap): hosted-LLM verification of the design-review
 quality (only a local 4B model was tried), human review of the 24 design notes, class-diagram canvas for low-level design,
 measured effect of the crash course on learners, a load test of the distributed stack, redundancy of the data tier (one Postgres, one
-Redis, one nginx), and a live GitHub Actions run (workflows are linted but were authored without being executed on GitHub).
+Redis, one nginx), and CodeQL (needs the repo to be public or code scanning enabled), and the CD publish/deploy path (images have not been pushed to GHCR or deployed to a VM yet).
 The company-wise problem lists come from a community repository that declares no licence; decide whether to keep that source
 before you publish a hosted instance ([`docs/interview-resources.md`](docs/interview-resources.md)).
 

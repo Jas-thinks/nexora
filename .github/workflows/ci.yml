@@ -109,7 +109,7 @@ jobs:
           cache-from: type=gha,scope=${{ matrix.name }}
           cache-to: type=gha,scope=${{ matrix.name }},mode=max
       - name: Vulnerability scan (fails on fixable CRITICAL)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with: { image-ref: "nexora-${{ matrix.name }}:ci", severity: CRITICAL, ignore-unfixed: true, exit-code: "1", vuln-type: "os,library" }
 
   stack-e2e:
