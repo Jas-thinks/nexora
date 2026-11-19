@@ -2,3 +2,5 @@
 *.sh text eol=lf
 *.png binary
 *.ico binary
+# Recorded upstream responses are test inputs: keep their bytes (including CRLF) exactly as captured.
+backend/tests/fixtures/** -text
