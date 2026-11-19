@@ -24,7 +24,7 @@ CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers ${WE
 # ---- executor: the only image that talks to a Docker daemon. Run it on its own host/network (docs/CODE_EXECUTION.md).
 FROM base AS executor
 # Static Docker CLI from the official image. (Debian 13's `docker.io` package no longer ships the CLI, so apt cannot be relied on.)
-COPY --from=docker:27-cli /usr/local/bin/docker /usr/local/bin/docker
+COPY --from=docker:29-cli /usr/local/bin/docker /usr/local/bin/docker
 EXPOSE 9000
 HEALTHCHECK --interval=20s --timeout=5s --retries=5 CMD python -c "import socket;socket.create_connection(('127.0.0.1',9000),2)" || exit 1
 CMD ["uvicorn", "app.execution.service:app", "--host", "0.0.0.0", "--port", "9000", "--workers", "2"]
