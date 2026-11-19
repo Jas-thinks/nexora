@@ -1,0 +1,13 @@
+{
+  "slug": "nexora-starter-800",
+  "title": "Nexora Starter Ladder (800)",
+  "source": "Curated by Nexora: classic Codeforces 800-rated warm-ups",
+  "description": "Ten well-known 800-rated Codeforces problems to build implementation fluency. This is NOT the CP-31 or Striver sheet; import those via the sheet importer.",
+  "items": [
+    {"problem": "4A", "section": "Basics"}, {"problem": "71A", "section": "Basics"},
+    {"problem": "231A", "section": "Basics"}, {"problem": "158A", "section": "Basics"},
+    {"problem": "112A", "section": "Strings"}, {"problem": "281A", "section": "Strings"},
+    {"problem": "266A", "section": "Strings"}, {"problem": "282A", "section": "Simulation"},
+    {"problem": "50A", "section": "Math"}, {"problem": "263A", "section": "Simulation"}
+  ]
+}

@@ -1,0 +1,5 @@
+# Dev/CI extras. Runtime dependencies live in requirements.txt.
+pytest-cov==7.1.0
+pip-audit==2.10.1
+ruff==0.17.5
+-r requirements.txt

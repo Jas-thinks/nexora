@@ -1,0 +1,17 @@
+[tool.ruff]
+line-length = 200            # the codebase favours dense, commented one-liners; formatting is not enforced
+target-version = "py312"
+extend-exclude = ["migrations/versions", ".venv"]
+
+[tool.ruff.lint]
+# Correctness only: syntax errors, undefined names, unused imports/variables, shadowed/duplicated definitions, bugbear's real-bug checks.
+select = ["E9", "F", "B006", "B008", "B015", "B018", "B023", "B904"]
+ignore = ["B008"]            # FastAPI's Depends(...) in argument defaults is the framework's idiom
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["F811", "F841"]        # pytest fixtures are re-declared as parameters; scratch variables in arrange steps
+"scripts/*" = ["B023"]              # worker closures in the load test run within their own loop iteration
