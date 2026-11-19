@@ -1,0 +1,14 @@
+name: Feature request
+description: Suggest an improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: What problem does this solve, and for whom }
+    validations: { required: true }
+  - type: textarea
+    id: idea
+    attributes: { label: What you would like to see }
+  - type: textarea
+    id: evidence
+    attributes: { label: "How we would know it worked", description: "A measurable outcome beats a feeling." }

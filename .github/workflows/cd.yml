@@ -1,0 +1,104 @@
+name: CD
+# main  -> build + push images (tag: git sha, and `latest`) -> deploy to production if a deploy target is configured
+# v*    -> same, plus a GitHub release with generated notes
+on:
+  push: { branches: [main], tags: ["v*"] }
+  workflow_dispatch: {}
+concurrency: { group: cd, cancel-in-progress: false }   # never interrupt a deploy that is half way through
+env:
+  REGISTRY: ghcr.io
+  IMAGE_PREFIX: ghcr.io/${{ github.repository }}
+
+jobs:
+  # CD only ships what CI blessed: wait for CI on this commit rather than re-running tests here.
+  gate:
+    runs-on: ubuntu-latest
+    permissions: { checks: read }
+    steps:
+      - uses: lewagon/wait-on-check-action@v1.3.4
+        with:
+          ref: ${{ github.sha }}
+          running-workflow-name: gate
+          check-regexp: '^(backend-test|web|docker .*|full stack.*)$'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 20
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: gate
+    permissions: { contents: read, packages: write, id-token: write, attestations: write }
+    strategy:
+      matrix:
+        include:
+          - { name: api, context: backend, target: api }
+          - { name: executor, context: backend, target: executor }
+          - { name: web, context: web, target: "" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-qemu-action@v3
+        if: vars.MULTIARCH == 'true'
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with: { registry: "${{ env.REGISTRY }}", username: "${{ github.actor }}", password: "${{ secrets.GITHUB_TOKEN }}" }
+      - id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE_PREFIX }}/${{ matrix.name }}
+          tags: |
+            type=sha,format=long,prefix=
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=semver,pattern={{version}}
+      - id: build
+        uses: docker/build-push-action@v6
+        with:
+          context: ${{ matrix.context }}
+          target: ${{ matrix.target }}
+          push: true
+          platforms: ${{ vars.MULTIARCH == 'true' && 'linux/amd64,linux/arm64' || 'linux/amd64' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha,scope=${{ matrix.name }}
+          cache-to: type=gha,scope=${{ matrix.name }},mode=max
+          provenance: true
+          sbom: true
+      - uses: actions/attest-build-provenance@v2
+        with: { subject-name: "${{ env.IMAGE_PREFIX }}/${{ matrix.name }}", subject-digest: "${{ steps.build.outputs.digest }}", push-to-registry: true }
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: publish
+    # Skipped (not failed) until you configure a target: Settings > Environments > production > variables/secrets.
+    if: vars.DEPLOY_HOST != ''
+    environment: { name: production, url: "https://${{ vars.DEPLOY_DOMAIN }}" }
+    env:
+      HOST: ${{ vars.DEPLOY_HOST }}
+      DEPLOY_USER: ${{ vars.DEPLOY_USER || 'deploy' }}
+      DOMAIN: ${{ vars.DEPLOY_DOMAIN }}
+      SHA: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: SSH setup
+        env:
+          SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          KNOWN_HOSTS: ${{ vars.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_deploy && chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts      # pinned host key: no trust-on-first-use
+      - name: Ship compose files and scripts
+        run: rsync -az -e "ssh -i ~/.ssh/id_deploy" docker-compose.yml docker-compose.prod.yml deploy scripts "$DEPLOY_USER@$HOST:/opt/nexora/"
+      - name: Deploy (pull -> migrate -> rolling replace -> smoke test -> auto-rollback)
+        run: ssh -i ~/.ssh/id_deploy "$DEPLOY_USER@$HOST" "cd /opt/nexora && deploy/vm/deploy.sh $SHA"
+      - name: Public smoke test over HTTPS
+        run: |
+          for _ in $(seq 1 12); do curl -fsS "https://$DOMAIN/api/ready" && exit 0; sleep 10; done; exit 1
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    needs: publish
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+      - run: gh release create "${{ github.ref_name }}" --generate-notes --verify-tag
+        env: { GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
